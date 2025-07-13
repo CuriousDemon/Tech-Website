@@ -23,10 +23,12 @@ Color: Black
 RGB: rgb(0, 0, 0)
 /////////////////
 
-Banner Background 
 
-Ye gradient top se bottom ka h 
 
-Light Blue — rgb(173, 240, 255)
-Pale Aqua — rgb(180, 255, 245)
-Light Greenish Yellow — rgb(215, 255, 200) */
+*/
+
+.gradient-bg {
+      background: linear-gradient(to right, #C3FFDB 42%, #B6FBFE 75%, #B7FBFF 91%);
+      height: 100vh; 
+      width: 100%;
+    }
