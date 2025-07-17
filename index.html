@@ -4,13 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- For icons , we are using this  -->
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+
     <title>Tech-Website</title>
 
 
 </head>
 <body>
-     <div class="gradient-bg">
-       <h1>REFER TO THE STYLE.CSS FILE FOR RGB CODES</h1>
+  <div class="header">
+  <!-- NAVBAR STARTS HERE -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <div class="nav-items">
+      <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+  <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
+  <a href="#"><i class="fas fa-user"></i><span>GUEST USER</span></a>
+  <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
+  <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a>
+    </div>
+    <div class="cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span>CART</span>
+    </div>
   </div>
+</nav>
+<!-- NAVBAR ENDS HERE -->
+ <!-- Cart section start -->
+ <div class="cart-popup-wrapper">
+  <div class="cart-popup">
+    <div class="cart-top">CART</div>
+
+    <div class="cart-item">
+      <div class="item-image1"></div>
+      <div class="item-details-without-pic">
+        <div class="item-name">iPhone 14 Pro Max</div>
+        <div class="item-price">Rs. 1,39,900</div>
+        <div class="item-quantity">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <div class="item-image2"></div>
+      <div class="item-details-without-pic">
+        <div class="item-name">boat earbuds 131</div>
+        <div class="item-price">Rs. 799</div>
+        <div class="item-quantity">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="cart-bottom">
+    <div class="total-cost">Total: Rs. 140,699.00</div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+  </div>
+</div>
+
+<!-- Cart section end -->
+  <!-- SEARCH BAR -->
+    <div class="search-bar">
+      <i class="fas fa-bars"></i>
+      <input type="text" placeholder="SEARCH FOR YOUR PRODUCT" />
+      <i class="fas fa-search"></i>
+    </div>
+
+    <!-- MANUAL SLIDER -->
+    <div class="manual-slider">
+
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="slider-left">
+          <img src="images/Picture1.jpg" alt="Nokia" />
+        </div>
+        <div class="slider-right">
+          <h1 class="product-title">Iphone 14 <br>Pro Edition</h1>
+          <div class="slider-buttons">
+            <span class="learn-more">LEARN MORE</span>
+            <button class="buy-now">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slider-left">
+          <img src="images/iphone 15 pro max.jpeg" alt="iPhone" />
+        </div>
+        <div class="slider-right">
+          <h1 class="product-title">IPhone 15<br>Pro Edition</h1>
+          <div class="slider-buttons">
+            <span class="learn-more">LEARN MORE</span>
+            <button class="buy-now">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slider-left">
+          <img src="images/658da0be910005387c5e2673-restored-apple-iphone-15-pro-max-256gb.jpg" alt="newIphone" />
+        </div>
+        <div class="slider-right">
+          <h1 class="product-title">Iphone 16<br>Pro Edition</h1>
+          <div class="slider-buttons">
+            <span class="learn-more">LEARN MORE</span>
+            <button class="buy-now">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Arrows -->
+      <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+    </div>
+
+  </div>
+  <!--............................ Header section ends here....................................... -->
+  <!-- ......................Footer starts................................... -->
+<footer class="footer" id="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h2>About Us</h2>
+      <p>
+        We connect users with top tech products and reliable services.
+        Fast delivery, secure payments, and 24/7 customer support.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h2>Follow Us</h2>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Tech Website. All rights reserved.</p>
+  </div>
+</footer>
+   </div>
+ <script src="script.js"></script>
 </body>
 </html>
