@@ -16,3 +16,7 @@ function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
 }
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
