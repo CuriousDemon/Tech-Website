@@ -16,3 +16,20 @@ function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
 }
+
+// For Cart pop-up
+document.addEventListener("DOMContentLoaded", function () {
+  const cartIcon = document.querySelector(".cart");
+  const cartPopup = document.querySelector(".cart-popup");
+
+  cartIcon.addEventListener("click", function () {
+    cartPopup.classList.toggle("show");
+  });
+
+  // Optional: Hide cart popup when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!cartPopup.contains(e.target) && !cartIcon.contains(e.target)) {
+      cartPopup.classList.remove("show");
+    }
+  });
+});
