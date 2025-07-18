@@ -19,6 +19,22 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
+// Add logic to implement product page into index page
+
+
+async function injectHTML() {
+  try {
+    const res = await fetch("./product.html");
+    const html = await res.text();
+    document
+      .querySelectorAll(".manual-slider")
+      .forEach((el) => el.insertAdjacentHTML("afterend", html));
+  } catch (err) {
+    console.error(err);
+  }
+}
+injectHTML();
+
 //Logic for toggling the dark color mode
 
 black = false;
