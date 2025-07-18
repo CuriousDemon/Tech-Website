@@ -19,37 +19,19 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Add logic to implement product page into index page
+// For Cart pop-up
+document.addEventListener("DOMContentLoaded", function () {
+  const cartIcon = document.querySelector(".cart");
+  const cartPopup = document.querySelector(".cart-popup");
 
+  cartIcon.addEventListener("click", function () {
+    cartPopup.classList.toggle("show");
+  });
 
-async function injectHTML() {
-  try {
-    const res = await fetch("./product.html");
-    const html = await res.text();
-    document
-      .querySelectorAll(".manual-slider")
-      .forEach((el) => el.insertAdjacentHTML("afterend", html));
-  } catch (err) {
-    console.error(err);
-  }
-}
-injectHTML();
-
-//Logic for toggling the dark color mode
-
-black = false;
-const btn = document.getElementById("darkBtn");
-document.getElementById("darkBtn").onclick = function(){
-      document.body.style.background = black? "linear-gradient(to right, #C3FFDB 42%, #B6FBFE 75%, #B7FBFF 91%)":"linear-gradient(to right, #040404ff 42%, #2d2b2bff 75%, #111717ff 91%)";
-      
-      
-      if(black)  btn.style.backgroundColor = "white";
-      else btn.style.backgroundColor =" black";
-
-      btn.style.color = black ? "black" : "white";
-
-      black = !black;
-}
-
-
-
+  // Optional: Hide cart popup when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!cartPopup.contains(e.target) && !cartIcon.contains(e.target)) {
+      cartPopup.classList.remove("show");
+    }
+  });
+});
