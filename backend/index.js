@@ -14,6 +14,11 @@ app.get('/',(req,res,next) => {
     res.sendFile(path.join(rootDir,'views','index.html'));
 })
 
+app.get('/product.html', (req, res) => {
+  res.sendFile(path.join(rootDir, 'views', 'product.html'));
+});
+
+
 app.listen(port,() => {
     console.log(`Address running on http://localhost:${port}`);
 })
