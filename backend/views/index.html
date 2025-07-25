@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- For icons , we are using this  -->
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
 
     <title>Tech-Website</title>
 
@@ -21,7 +22,8 @@
   <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
   <a href="#"><i class="fas fa-user"></i><span>GUEST USER</span></a>
   <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
-  <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a>
+  <!-- <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a> -->
+  <button id="darkBtn"><i class="fas fa-moon"></i><span>DARK MODE</span></button>
     </div>
     <div class="cart">
       <i class="fas fa-shopping-cart"></i>
@@ -30,6 +32,46 @@
   </div>
 </nav>
 <!-- NAVBAR ENDS HERE -->
+ <!-- Cart section start -->
+ <div class="cart-popup-wrapper">
+  <div class="cart-popup">
+    <div class="cart-top">CART</div>
+
+    <div class="cart-item">
+      <div class="item-image1"></div>
+      <div class="item-details-without-pic">
+        <div class="item-name">iPhone 14 Pro Max</div>
+        <div class="item-price">Rs. 1,39,900</div>
+        <div class="item-quantity">
+          <button class="plus-minus">-</button>
+          <span>1</span>
+          <button class="plus-minus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <div class="item-image2"></div>
+      <div class="item-details-without-pic">
+        <div class="item-name">boat earbuds 131</div>
+        <div class="item-price">Rs. 799</div>
+        <div class="item-quantity">
+          <button class="plus-minus">-</button>
+          <span>1</span>
+          <button class="plus-minus">+</button>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="cart-bottom">
+    <div class="total-cost">Total: Rs. 140,699.00</div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+  </div>
+</div>
+
+<!-- Cart section end -->
   <!-- SEARCH BAR -->
     <div class="search-bar">
       <i class="fas fa-bars"></i>
