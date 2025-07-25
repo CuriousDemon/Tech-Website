@@ -19,23 +19,7 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Add logic to implement product page into index page
 
-const path = require('path');
-const rootDir = require('../utils/pathUtils');
-
-async function injectHTML() {
-  try {
-    const res = await fetch(path.join(rootDir,'views','product.html'));
-    const html = await res.text();
-    document
-      .querySelectorAll(".manual-slider")
-      .forEach((el) => el.insertAdjacentHTML("afterend", html));
-  } catch (err) {
-    console.error(err);
-  }
-}
-injectHTML();
 
 //Logic for toggling the dark color mode
 
@@ -55,6 +39,7 @@ document.getElementById("darkBtn").onclick = function(){
 
 
 // For Cart pop-up
+
 document.addEventListener("DOMContentLoaded", function () {
   const cartIcon = document.querySelector(".cart");
   const cartPopup = document.querySelector(".cart-popup");
@@ -70,3 +55,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
