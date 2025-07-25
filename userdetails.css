@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.popup {
+  width: 722px;
+  height: 766px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgb(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.popup-header h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.popup-header h1 span {
+  font-weight: 700;
+  color: #6a5acd;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.popup-form label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.popup-form input {
+  width: 570px;
+  height: 72px;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+button.confirm, button.clear {
+  width: 304px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6a5acd;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.clear {
+  background-color: #6a5acd;
+}
+
+button.confirm:hover,
+button.clear:hover {
+  background-color: #5848c2;
+}
