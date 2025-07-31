@@ -40,17 +40,28 @@
   
   // Add logic for removing pop up
 
+  const clearPopUp = () => {
+    document.querySelector(".popup-background").setAttribute("style","display:none;z-index:-1;")
+  }
+
   document.querySelector(".popup-form").addEventListener("submit", function(e) {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    alert(`Submitted:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`);
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+    const phone = document.getElementById("phone")
+    if(name.value != '' && email.value != '' && !isNaN(phone.value))
+    {
+      clearPopUp();
+        document.getElementById('username').innerText =  name.value.toUpperCase();
+        name.value = ''
+        email.value = ''
+        phone.value = ''
+    }
   });
 
-  document.querySelector(".close-btn").addEventListener("click", () => {
-    document.querySelector(".popup-background").setAttribute("style","display:none;z-index:-1;")
-  });
+
+  document.querySelector(".close-btn").addEventListener("click", clearPopUp);
+
 </script>
 
 </body>
