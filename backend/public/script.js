@@ -21,10 +21,12 @@ function prevSlide() {
 
 // Add logic to implement product page into index page
 
+// const path = require('path');
+// const rootDir = require('../utils/pathUtils');
 
 async function injectHTML() {
   try {
-    const res = await fetch("./product.html");
+    const res = await fetch('/product.html');
     const html = await res.text();
     document
       .querySelectorAll(".manual-slider")
@@ -37,7 +39,7 @@ injectHTML();
 
 //Logic for toggling the dark color mode
 
-black = false;
+let black = false;
 const btn = document.getElementById("darkBtn");
 document.getElementById("darkBtn").onclick = function(){
       document.body.style.background = black? "linear-gradient(to right, #C3FFDB 42%, #B6FBFE 75%, #B7FBFF 91%)":"linear-gradient(to right, #040404ff 42%, #2d2b2bff 75%, #111717ff 91%)";
@@ -68,3 +70,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
