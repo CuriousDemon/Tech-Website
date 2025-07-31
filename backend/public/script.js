@@ -57,4 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//For User details pop up
+
+const guest_user = document.getElementById('guest_user');
+const popUp = document.querySelector('.popup-background')
+
+guest_user.addEventListener('click', () => {
+  popUp.setAttribute("style","display : block;top : 7%; z-index:10;")
+})
 

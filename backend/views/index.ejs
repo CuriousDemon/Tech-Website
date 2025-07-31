@@ -19,10 +19,15 @@
   <div class="navbar-content">
     <div class="nav-items">
       <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+
   <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
-  <a href="#"><i class="fas fa-user"></i><span>GUEST USER</span></a>
+
+  <a href="#" id="guest_user"><i class="fas fa-user"></i><span>GUEST USER</span></a>
+
   <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
+
   <!-- <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a> -->
+   
   <button id="darkBtn"><i class="fas fa-moon"></i><span>DARK MODE</span></button>
     </div>
     <div class="cart">
@@ -132,6 +137,13 @@
 
   </div>
   <!--............................ Header section ends here....................................... -->
+
+  <!-- User details Pop up add here -->
+
+  <%- include('partials/userdetails') %>
+
+  <!-- User details Pop up end here -->
+
 
   <!-- Product section add here using javascipt -->
 
