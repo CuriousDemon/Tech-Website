@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Details Popup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="userdetails.css" />
+</head>
+<body>
+
+<div class="popup-background">
+  
+<div class="popup">
+  <div class="popup-header">
+    <h1>Welcome to<br><span>Tech Website</span></h1>
+    <button class="close-btn">&times;</button>
+  </div>
+
+  <form class="popup-form">
+    <label for="name">NAME</label>
+    <input type="text" id="name" placeholder="Full Name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="example@gmail.com">
+
+    <label for="phone">PHONE NUMBER</label>
+    <input type="text" id="phone" placeholder="*******321">
+
+    <div class="button-group">
+      <button type="submit" class="confirm">CONFIRM</button>
+      <button type="reset" class="clear">CLEAR</button>
+    </div>
+  </form>
+</div>
+
+</div>
+
+<script>
+  
+  // Add logic for removing pop up
+
+  const clearPopUp = () => {
+    document.querySelector(".popup-background").setAttribute("style","display:none;z-index:-1;")
+  }
+
+  document.querySelector(".popup-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+    const phone = document.getElementById("phone")
+    if(name.value != '' && email.value != '' && !isNaN(phone.value))
+    {
+      clearPopUp();
+        document.getElementById('username').innerText =  name.value.toUpperCase();
+        name.value = ''
+        email.value = ''
+        phone.value = ''
+    }
+  });
+
+
+  document.querySelector(".close-btn").addEventListener("click", clearPopUp);
+
+</script>
+
+</body>
+</html>

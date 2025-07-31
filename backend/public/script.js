@@ -21,18 +21,19 @@ function prevSlide() {
 
 // Add logic to implement product page into index page
 
-
-
+const path = require('path');
+const rootDir = require('../utils/pathUtils');
 
 async function injectHTML() {
   try {
-    const res = await fetch('/product.html'); 
+    const res = await fetch(path.join(rootDir,'views','product.html'));
     const html = await res.text();
     document
       .querySelectorAll(".manual-slider")
       .forEach((el) => el.insertAdjacentHTML("afterend", html));
   } catch (err) {
-    console.error("Failed to fetch product.html:", err);
+    console.error(err);
   }
 }
 injectHTML();
+

@@ -60,6 +60,22 @@ h1{
   font-weight: bold;
   margin: 0;
 }
+/* Edit for add to cart option begin */
+
+.product-card button{
+     border-radius: 12px;
+     background: linear-gradient(to right, #C3FFDB 42%, #B6FBFE 75%, #B7FBFF 91%);
+      width: 180px;
+      height: 50px;
+      align-self: center; 
+       margin-top: 10px;
+
+}
+
+/* Edit for add to cart option end */
+
+
+
 
 /*  Responsive layout */
 @media (max-width: 768px) {

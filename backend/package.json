@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
+=======
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+>>>>>>> 512a77969391d1b4ec68220dd99ca9d7e7054e75
   }
 }
