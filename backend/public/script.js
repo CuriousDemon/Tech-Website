@@ -19,8 +19,8 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Add logic to implement product page into index page
 
+<<<<<<< HEAD
 // const path = require('path');
 // const rootDir = require('../utils/pathUtils');
 
@@ -36,6 +36,8 @@ async function injectHTML() {
   }
 }
 injectHTML();
+=======
+>>>>>>> 512a77969391d1b4ec68220dd99ca9d7e7054e75
 
 //Logic for toggling the dark color mode
 
@@ -55,6 +57,7 @@ document.getElementById("darkBtn").onclick = function(){
 
 
 // For Cart pop-up
+
 document.addEventListener("DOMContentLoaded", function () {
   const cartIcon = document.querySelector(".cart");
   const cartPopup = document.querySelector(".cart-popup");
@@ -72,3 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+<<<<<<< HEAD
+=======
+//For User details pop up
+
+const guest_user = document.getElementById('guest_user');
+const popUp = document.querySelector('.popup-background')
+
+guest_user.addEventListener('click', () => {
+  popUp.setAttribute("style","display : block;top : 7%; z-index:10;")
+})
+
+>>>>>>> 512a77969391d1b4ec68220dd99ca9d7e7054e75
