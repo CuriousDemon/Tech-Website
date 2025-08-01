@@ -19,10 +19,10 @@ app.get('/',(req,res,next) => {
 })
 
 
-app.get('/product.html',(req,res,) => {
-    // res.send("Hello world");
-    res.sendFile(path.join(rootDir,'views','product.html'));
-})
+// app.get('/product.html',(req,res,) => {
+//     // res.send("Hello world");
+//     res.sendFile(path.join(rootDir,'views','product.html'));
+// })
 
 
 app.listen(port,() => {

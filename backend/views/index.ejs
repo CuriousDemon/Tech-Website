@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- For icons , we are using this  -->
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
 
-    <title>Tech-Website</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- For icons , we are using this  -->
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+
+  <title>Tech-Website</title>
 
 
 </head>
+
 <body>
   <div class="header">
-  <!-- NAVBAR STARTS HERE -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <div class="nav-items">
-      <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+    <!-- NAVBAR STARTS HERE -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <div class="nav-items">
+          <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
 
-  <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
+          <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
 
-  <a href="#" id="guest_user"><i class="fas fa-user"></i><span id="username">GUEST USER</span></a>
+          <a href="#" id="guest_user"><i class="fas fa-user"></i><span id="username">GUEST USER</span></a>
 
-  <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
+          <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
 
-  <!-- <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a> -->
+          <!-- <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a> -->
 
-  <button id="darkBtn"><i class="fas fa-moon"></i><span>DARK MODE</span></button>
-    </div>
-    <div class="cart">
-      <i class="fas fa-shopping-cart"></i>
-      <span>CART</span>
-    </div>
-  </div>
-</nav>
-<!-- NAVBAR ENDS HERE -->
- <!-- Cart section start -->
- <div class="cart-popup-wrapper">
-  <div class="cart-popup">
-    <div class="cart-top">CART</div>
+          <button id="darkBtn"><i class="fas fa-moon"></i><span>DARK MODE</span></button>
+        </div>
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span>CART</span>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR ENDS HERE -->
+    <!-- Cart section start -->
+    <div class="cart-popup-wrapper">
+      <div class="cart-popup">
+        <div class="cart-top">CART</div>
 
-    <div class="cart-item">
+        <div class="cart-items-container">
+          <!-- Items will be injected here via JS -->
+        </div>
+
+        <!-- <div class="cart-item">
       <div class="item-image1"></div>
       <div class="item-details-without-pic">
         <div class="item-name">iPhone 14 Pro Max</div>
@@ -53,9 +59,9 @@
           <button class="plus-minus">+</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="cart-item">
+        <!-- <div class="cart-item">
       <div class="item-image2"></div>
       <div class="item-details-without-pic">
         <div class="item-name">boat earbuds 131</div>
@@ -66,18 +72,18 @@
           <button class="plus-minus">+</button>
         </div>
       </div>
-    </div>
-    
+    </div> -->
 
-  <div class="cart-bottom">
+
+        <!-- <div class="cart-bottom">
     <div class="total-cost">Total: Rs. 140,699.00</div>
     <button class="checkout-btn">Checkout</button>
-  </div>
-  </div>
-</div>
+  </div> -->
+      </div>
+    </div>
 
-<!-- Cart section end -->
-  <!-- SEARCH BAR -->
+    <!-- Cart section end -->
+    <!-- SEARCH BAR -->
     <div class="search-bar">
       <i class="fas fa-bars"></i>
       <input type="text" placeholder="SEARCH FOR YOUR PRODUCT" />
@@ -140,11 +146,7 @@
 
   <!-- User details Pop up add here -->
 
-<<<<<<< HEAD:backend/views/index.html
-  
-=======
-  <%- include('partials/userdetails') %>
->>>>>>> 512a77969391d1b4ec68220dd99ca9d7e7054e75:backend/views/index.ejs
+
 
   <!-- User details Pop up end here -->
 
@@ -154,45 +156,46 @@
   <%- include('partials/product') %>
 
 
-<!-- Product section end here -->
+    <!-- Product section end here -->
 
-  <!-- ......................Footer starts................................... -->
-<footer class="footer" id="footer">
-  <div class="footer-container">
+    <!-- ......................Footer starts................................... -->
+    <footer class="footer" id="footer">
+      <div class="footer-container">
 
-    <div class="footer-column">
-      <h2>About Us</h2>
-      <p>
-        We connect users with top tech products and reliable services.
-        Fast delivery, secure payments, and 24/7 customer support.
-      </p>
+        <div class="footer-column">
+          <h2>About Us</h2>
+          <p>
+            We connect users with top tech products and reliable services.
+            Fast delivery, secure payments, and 24/7 customer support.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2>Follow Us</h2>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tech Website. All rights reserved.</p>
+      </div>
+    </footer>
     </div>
-
-    <div class="footer-column">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Delivery</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h2>Follow Us</h2>
-      <ul class="social-icons">
-        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-      </ul>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Tech Website. All rights reserved.</p>
-  </div>
-</footer>
-   </div>
- <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
