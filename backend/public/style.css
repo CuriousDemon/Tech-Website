@@ -31,6 +31,7 @@ RGB: rgb(0, 0, 0)
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 html {
@@ -334,26 +335,34 @@ body {
   height: 100vh;
 } */
 
+/*
+For cart Pop up 
+ */
+
 .cart-popup {
   font-family: 'Calistoga', cursive;
   display: none;
   position: absolute;
   right: 20px;
-  top: 100px;
-  width: 477px;
+  /* top: 100px; */
+  width: 600px;
+  max-height: 800px;
   background-color: white;
   border: 1px solid #ccc;
   z-index: 1000;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .cart-popup.show {
   display: block;
 }
 
-.cart-top {
+#cart-top {
   /* width: 477px; */
   height: 100px;
   background-color: #B7FF93;
@@ -377,7 +386,7 @@ body {
   justify-content: space-between;
 }
 
-.total-cost {
+#total-cost {
   font-size: 25px;
   font-family: 'Calistoga', cursive;
   color: black;
@@ -402,16 +411,16 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
 }
 
-.plus-minus{
+.plus .minus{
   transition: box-shadow 0.3s ease ;
 }
-.plus-minus:hover{
+.plus .minus:hover{
   box-shadow: 0 0 20px cyan;
 }
 
 .cart-item {
-  width: 441px;
-  height: 181px;
+  width: 95%;
+  height: 200px;
   background-color: #CDFFD9;
   margin: 10px auto;
   border-radius: 20px;
@@ -431,18 +440,21 @@ body {
   flex-shrink: 0;
 } */
 
-.item-image1{
+.item-image img{
   height: 160px;
   width: 160px;
   display: flex;
-  background-image: url(https://media.extra.com/s/aurora/100315775_800/Apple-iPhone-14-Pro-Max%2C-5G%2C-128GB%2C-Space-Black?locale=en-GB,en-*,*);
+  /* background-image: url(https://media.extra.com/s/aurora/100315775_800/Apple-iPhone-14-Pro-Max%2C-5G%2C-128GB%2C-Space-Black?locale=en-GB,en-*,*); */
   background-size:cover;
   background-position:center;
   border-radius: 10px;
   flex-shrink: 0;
 }
 
-.item-image2{
+
+
+
+/* .item-image2{
   height: 160px;
   width: 160px;
   display: flex;
@@ -451,11 +463,11 @@ body {
   background-position: center;
   border-radius: 10px;
   flex-shrink: 0;
-}
+} */
 
 
 .item-details-without-pic {
-  width: 50%;
+  width: 70%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -493,6 +505,9 @@ body {
   cursor: pointer;
 }
 
+/* 
+End here
+ */
 
  /* Tablets (768px - 1024px) */
 /* @media screen and (max-width: 1024px) {
