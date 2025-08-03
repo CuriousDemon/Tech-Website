@@ -18,11 +18,14 @@ app.get('/',(req,res,next) => {
     res.render('index');
 })
 
+// app.get('/product.html', (req, res) => {
+//   res.sendFile(path.join(rootDir, 'views', 'product.html'));
+// });
 
-app.get('/product.html',(req,res,) => {
-    // res.send("Hello world");
-    res.sendFile(path.join(rootDir,'views','product.html'));
-})
+// app.get('/product.html',(req,res,) => {
+//     // res.send("Hello world");
+//     res.sendFile(path.join(rootDir,'views','product.html'));
+// })
 
 
 app.listen(port,() => {

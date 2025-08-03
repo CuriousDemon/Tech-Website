@@ -21,22 +21,6 @@ function prevSlide() {
 
 
 
-//Logic for toggling the dark color mode
-
-black = false;
-const btn = document.getElementById("darkBtn");
-document.getElementById("darkBtn").onclick = function(){
-      document.body.style.background = black? "linear-gradient(to right, #C3FFDB 42%, #B6FBFE 75%, #B7FBFF 91%)":"linear-gradient(to right, #040404ff 42%, #2d2b2bff 75%, #111717ff 91%)";
-      
-      
-      if(black)  btn.style.backgroundColor = "white";
-      else btn.style.backgroundColor =" black";
-
-      btn.style.color = black ? "black" : "white";
-
-      black = !black;
-}
-
 
 // For Cart pop-up
 
@@ -127,7 +111,6 @@ function checkItemExists(itemName) {
     return null;
   }
 
-  console.log(itemName)
 
   // Select all the existing cart item elements.
   const cartItems = document.querySelectorAll('.cart-item');
@@ -172,7 +155,6 @@ function checkItemExists(itemName) {
 
       const productItem = createCartItem(product_name.innerText, product_price.innerText, 1, product_image.src);
 
-      console.log(totalCost.innerText.replace(/[^0-9.]/g, ''))
       if(!checkItemExists(product_name.innerText)){
         //If element does not exist
         cart_top.after(productItem);
@@ -197,7 +179,6 @@ function checkItemExists(itemName) {
       element.addEventListener("click",() => {
         const quantity = element.nextElementSibling
         const price = element.parentElement.previousElementSibling
-        console.log(price)
         if(Number(quantity.textContent.replace(/[^0-9.]/g, '')) > 1){
         quantity.innerText = Number(quantity.textContent.replace(/[^0-9.]/g, '')) - 1;
         }else{
@@ -236,5 +217,6 @@ const popUp = document.querySelector('.popup-background')
 guest_user.addEventListener('click', () => {
   popUp.setAttribute("style","display : block;top : 7%; z-index:10;")
 })
+
 
 
