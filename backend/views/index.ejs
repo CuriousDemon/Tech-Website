@@ -19,10 +19,16 @@
   <div class="navbar-content">
     <div class="nav-items">
       <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+
   <a href="#footer"><i class="fas fa-info-circle"></i><span>ABOUT US</span></a>
-  <a href="#"><i class="fas fa-user"></i><span>GUEST USER</span></a>
+
+  <a href="#" id="guest_user"><i class="fas fa-user"></i><span id="username">GUEST USER</span></a>
+
   <a href="#"><i class="fas fa-phone"></i><span>CONTACT US</span></a>
-  <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a>
+
+  <!-- <a href="#"><i class="fas fa-moon"></i><span>DARK MODE</span></a> -->
+
+  <button id="darkBtn"><i class="fas fa-moon"></i><span>DARK MODE</span></button>
     </div>
     <div class="cart">
       <i class="fas fa-shopping-cart"></i>
@@ -34,37 +40,37 @@
  <!-- Cart section start -->
  <div class="cart-popup-wrapper">
   <div class="cart-popup">
-    <div class="cart-top">CART</div>
+    <div id="cart-top">CART</div>
 
-    <div class="cart-item">
-      <div class="item-image1"></div>
+    <!-- <div class="cart-item">
+      <div class="item-image"><img src="https://media.extra.com/s/aurora/100315775_800/Apple-iPhone-14-Pro-Max%2C-5G%2C-128GB%2C-Space-Black?locale=en-GB,en-*,*" alt="" srcset=""></div>
       <div class="item-details-without-pic">
         <div class="item-name">iPhone 14 Pro Max</div>
         <div class="item-price">Rs. 1,39,900</div>
         <div class="item-quantity">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
+          <button class="minus">-</button>
+          <span class="item_quantity">1</span>
+          <button class="plus">+</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="cart-item">
+    <!-- <div class="cart-item">
       <div class="item-image2"></div>
       <div class="item-details-without-pic">
         <div class="item-name">boat earbuds 131</div>
         <div class="item-price">Rs. 799</div>
         <div class="item-quantity">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
+          <button class="minus">-</button>
+          <span class="item_quantity">1</span>
+          <button class="plus">+</button>
         </div>
       </div>
-    </div>
+    </div> -->
     
 
   <div class="cart-bottom">
-    <div class="total-cost">Total: Rs. 140,699.00</div>
+    <div id="total-cost">Total: Rs. <span id="cost-value">0</span></div>
     <button class="checkout-btn">Checkout</button>
   </div>
   </div>
@@ -132,8 +138,16 @@
   </div>
   <!--............................ Header section ends here....................................... -->
 
+  <!-- User details Pop up add here -->
+
+  <%- include('partials/userdetails') %>
+
+  <!-- User details Pop up end here -->
+
+
   <!-- Product section add here using javascipt -->
 
+  <%- include('partials/product') %>
 
 <!-- Product section end here -->
 
@@ -174,6 +188,6 @@
   </div>
 </footer>
    </div>
- <script src="script.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
